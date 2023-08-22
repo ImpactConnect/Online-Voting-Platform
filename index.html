@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Voting Platform</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Welcome to the Online Voting Platform</h2>
+
+    <div class="container intro">
+      <p>
+        Before You Proceed to Cast Your Vote, Please follow the Steps Bellow:
+      </p>
+      <ul>
+        <li>Verify Your UserID Eligibility</li>
+        <li>Verify Your Age Eligibility</li>
+        <li>Cast Your Vote</li>
+      </ul>
+      <button id="chkElig">Start Verification</button>
+    </div>
+
+    <div class="container step-1">
+      <h3>STEP 1</h3>
+      <p>Please enter your ID Number:</p>
+      <input type="text" id="userId" placeholder="Enter ID" />
+      <button id="idElig">Check Eligibility</button>
+      <p style="font-weight: bold; color: red" id="IdresultMessage"></p>
+
+      <button class="proceedBtn" id="idPageBtn">Procced</button>
+    </div>
+
+    <div class="container step-2">
+      <h3>STEP 2 (AGE VERIFICATION)</h3>
+      <p>Please enter your Birth Year(e.g: 1995):</p>
+      <input type="text" id="ageVri" placeholder="Enter Birth Year" />
+      <button id="ageElig">Check Eligibility</button>
+      <p style="font-weight: bold; color: red" id="ageresultMessage"></p>
+
+      <button class="proceedBtn" id="agePageBtn">Procced</button>
+    </div>
+
+    <!-- <div class="container step-3">
+      <h3>STEP 3 (CAST YOUR VOTE)</h3>
+      <p>
+        Select the Candidate You Wish to Vote for and click on "Vote Now"
+        Button:
+      </p>
+      <button id="ageElig">VOTE NOW</button>
+      <p id="resultMessage"></p>
+    </div> -->
+
+    <div class="container2 step-3">
+      <h3>STEP 3 (CAST YOUR VOTE)</h3>
+      <p>
+        Select the Candidate You Wish to Vote for and click on "Vote Now"
+        Button:
+      </p>
+      <div class="card-container">
+        <div class="card">
+          <img src="image1.jpg" alt="Image 1" />
+          <p>Atiku Abubakar</p>
+          <input
+            type="radio"
+            name="candidate"
+            id="candidate1"
+            value="Atiku Abubakar"
+          />
+          <label for="candidate1">Select</label>
+        </div>
+        <div class="card">
+          <img src="image2.jpg" alt="Image 2" />
+          <p>Peter Obi</p>
+          <input
+            type="radio"
+            name="candidate"
+            id="candidate2"
+            value="Peter Obi"
+          />
+          <label for="candidate2">Select</label>
+        </div>
+        <div class="card">
+          <img src="image3.jpg" alt="Image 3" />
+          <p>Bola Tinubu</p>
+          <input
+            type="radio"
+            name="candidate"
+            id="candidate3"
+            value="Bola Tinubu"
+          />
+          <label for="candidate3">Select</label>
+        </div>
+      </div>
+      <hr />
+      <p style="font-weight: bold; color: green" id="candidateSelectMsg"></p>
+      <hr />
+      <button id="voteBtn">VOTE NOW</button>
+    </div>
+
+    <div class="container2 step-4">
+      <h3>LIVE VOTE COUNTS</h3>
+      <p id="candidate1Count"></p>
+      <p id="candidate2Count"></p>
+      <p id="candidate3Count"></p>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
